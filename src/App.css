@@ -14,6 +14,9 @@ body{
   flex-direction: column;
   align-items: center;
   position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 .heading{
   display: flex;
@@ -141,14 +144,45 @@ body{
     transform:translateX(-200px);
   }
 }
-.responseWrapper{
-  height: 35vh;
+.responses{
   position: absolute;
   bottom: 10vh;
-  background: #ffffffab;
   width: 80vw;
   left: 50%;
   transform: translateX(-50%);
+  height: 35vh;
+  overflow-y: scroll;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem; */
+  border-radius: 20px;
+}
+.responseWrapper{
+  height: 35vh;
+  
+  background: #ffffffab;
+  width: 100%;
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  /* overflow-y: scroll; */
+  border-bottom: 1px solid gray;
+}
+.responseWrapper1{
+  height: 35vh;
+  position: absolute;
+  bottom: 10vh;
+  width: 80vw;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80vw;
+  background: #ffffffab;
   border-radius: 20px;
   padding: 2rem;
   display: flex;
@@ -177,4 +211,26 @@ body{
   color: white;
   border: none;
   border-radius: 5px;
+}
+.downloadBtn{
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2vh;
+}
+.placeholder{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.btn{
+  transition: all 0.25s ease-in-out;
+}
+.btn:hover{
+  background-color: #000000ad;
+  cursor: pointer;
+  scale: 1.1;
+}
+.disabled{
+  color: red;
+  cursor: not-allowed;
 }
